@@ -61,8 +61,7 @@ ComfyUI-CometChat/
 ├─ comet_chat_plugin.py      # 后端 API、配置、对话和图片生成逻辑
 ├─ web/                      # 前端工作台源码
 ├─ README.md                 # 项目说明
-├─ LICENSE                   # Apache 2.0 协议
-└─ NOTICE                    # 作者和版权声明
+└─ LICENSE                   # Apache 2.0 协议
 ```
 
 ## 许可证
