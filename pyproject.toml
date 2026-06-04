@@ -17,5 +17,5 @@ Repository = "https://github.com/jieg9341-lab/ComfyUI-CometChat"
 "Bug Tracker" = "https://github.com/jieg9341-lab/ComfyUI-CometChat/issues"
 
 [tool.comfy]
-PublisherId = "jieg9341-lab"
+PublisherId = "nkxx188"
 DisplayName = "CometChat"
