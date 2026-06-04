@@ -1,0 +1,21 @@
+[project]
+name = "comet-chat"
+version = "1.0.1"
+description = "A lightweight ComfyUI chat assistant with model channels, attachments, Markdown rendering, image generation, and selection assistant tools."
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "aiohttp",
+]
+classifiers = [
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Repository = "https://github.com/jieg9341-lab/ComfyUI-CometChat"
+"Bug Tracker" = "https://github.com/jieg9341-lab/ComfyUI-CometChat/issues"
+
+[tool.comfy]
+PublisherId = "jieg9341-lab"
+DisplayName = "CometChat"
