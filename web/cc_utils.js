@@ -110,6 +110,11 @@ function isGptImageModelName(modelName) {
   return !!name && (name.includes("gpt-image") || name.includes("gptimage") || name.includes("image"));
 }
 
+function isExplicitGptImageModelName(modelName) {
+  const name = normalizeImageModelName(modelName);
+  return !!name && (name.includes("gpt-image") || name.includes("gptimage"));
+}
+
 export function normalizeApiFormatValue(value) {
   const text = String(value || "").trim().toLowerCase();
   if (text.includes("claude")) return "claude";
@@ -119,8 +124,9 @@ export function normalizeApiFormatValue(value) {
 
 export function normalizeImageApiFormatValue(value, modelName = "") {
   const text = String(value || "").trim().toLowerCase().replace(/-/g, "_");
-  if (IMAGE_API_FORMATS.has(text)) return text;
   if (isGeminiImageModelName(modelName)) return "gemini_image";
+  if (isExplicitGptImageModelName(modelName)) return "gpt_image";
+  if (IMAGE_API_FORMATS.has(text)) return text;
   if (isGptImageModelName(modelName)) return "gpt_image";
   if (text.includes("gemini")) return "gemini_image";
   if (text === "openai" || text === "openai_image" || text === "openai_images" || text === "images") return "gpt_image";
